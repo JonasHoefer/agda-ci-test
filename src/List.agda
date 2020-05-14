@@ -1,6 +1,7 @@
 module List where
 
 open import Data.Product using (_,_; _×_)
+open import NoneExistingLib
 
 infixr 5 _∷_
 data List A : Set where
@@ -13,6 +14,6 @@ _++_ : ∀ {A} → List A → List A → List A
 (x ∷ xs) ++ ys = x ∷ xs ++ ys
 
 zip : ∀ {A B} → List A → List B → List (A × B)
-zip []       _        = []
 zip _        []       = []
+zip []       _        = []
 zip (x ∷ xs) (y ∷ ys) = (x , y) ∷ zip xs ys
