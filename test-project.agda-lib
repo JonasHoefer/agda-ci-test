@@ -1,0 +1,3 @@
+name: test-project
+depend: standard-library
+include: src

@@ -32,4 +32,7 @@ jobs:
 
     # Checks all .agda files in the src directory using the helper script in tools
     - name: Check Agda Code
-      run: ./tools/check_all.sh
+      run: |
+        for f in $(find . -name "*.agda")
+          do agda --library-file /root/.agda/libraries "$f"
+        done
