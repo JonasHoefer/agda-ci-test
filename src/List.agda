@@ -1,7 +1,6 @@
 module List where
 
 open import Data.Product using (_,_; _×_)
-open import NoneExistingLib
 
 infixr 5 _∷_
 data List A : Set where
